@@ -71,4 +71,5 @@ export default {
   transparency: () => url('/transparency/'),
   welcome: () => url('/welcome/', {}),
   update: (id: string) => url('/update/', { id }),
+  grants: () => url('/grants/', {}),
 }
