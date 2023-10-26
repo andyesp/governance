@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { Location, useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import classNames from 'classnames'
 import { Close } from 'decentraland-ui/dist/components/Close/Close'
 

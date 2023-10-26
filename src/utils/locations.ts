@@ -1,7 +1,6 @@
-import { NavigateOptions } from '@reach/router'
 import API from 'decentraland-gatsby/dist/utils/api/API'
-import { navigate as gatsbyNavigate } from 'gatsby'
 
+// import { navigate as gatsbyNavigate } from 'gatsby'
 import { NewGrantCategory } from '../entities/Grant/types'
 import { CatalystType, HiringType, PoiType, ProposalStatus, ProposalType } from '../entities/Proposal/types'
 
@@ -73,9 +72,10 @@ export default {
   },
 }
 
-export function navigate(to: string, options?: NavigateOptions<any>) {
+export function navigate(to: string, options?: any) {
   if (typeof window === 'undefined') {
     return
   }
-  gatsbyNavigate(to, options)
+  // TODO: Remove this function
+  // gatsbyNavigate(to, options)
 }

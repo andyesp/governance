@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
+import { useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import isEqual from 'lodash/isEqual'
 import toSnakeCase from 'lodash/snakeCase'
 

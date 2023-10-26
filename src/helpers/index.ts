@@ -1,5 +1,4 @@
 import { ChainId } from '@dcl/schemas/dist/dapps/chain-id'
-import logger from 'decentraland-gatsby/dist/entities/Development/logger'
 import isEthereumAddress from 'validator/lib/isEthereumAddress'
 import isURL from 'validator/lib/isURL'
 
@@ -15,8 +14,8 @@ export const CURRENCY_FORMAT_OPTIONS = {
 export function inBackground(fun: () => Promise<any>) {
   Promise.resolve()
     .then(fun)
-    .then((result) => logger.log('Completed background task', { result: JSON.stringify(result) }))
-    .catch((err) => logger.error('Error running background task', formatError(err)))
+    .then((result) => console.log('Completed background task', { result: JSON.stringify(result) }))
+    .catch((err) => console.error('Error running background task', formatError(err)))
 }
 
 export function formatError(err: Error) {

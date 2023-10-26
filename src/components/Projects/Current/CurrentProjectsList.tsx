@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { navigate } from '@reach/router'
 import isEmpty from 'lodash/isEmpty'
 import orderBy from 'lodash/orderBy'
 
@@ -68,6 +68,7 @@ export default function CurrentProjectsList({ projects, selectedSubtype, selecte
   const [sortingKey, setSortingKey] = useState<SortingKey>(SortingKey.UpdateTimestamp)
   const sortedCurrentGrants = useMemo(() => orderBy(projects, [sortingKey], ['desc']), [projects, sortingKey])
   const [filteredCurrentGrants, setFilteredCurrentGrants] = useState<ProjectWithUpdate[]>([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (!isEmpty(projects)) {

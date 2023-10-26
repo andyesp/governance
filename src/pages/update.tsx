@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
+import { useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import Head from 'decentraland-gatsby/dist/components/Head/Head'
 import NotFound from 'decentraland-gatsby/dist/components/Layout/NotFound'
 import { Header } from 'decentraland-ui/dist/components/Header/Header'

@@ -1,6 +1,6 @@
-import classNames from 'classnames'
+import { useNavigate } from 'react-router-dom'
 
-import { navigate } from '../../../utils/locations'
+import classNames from 'classnames'
 
 import './Link.css'
 
@@ -22,6 +22,7 @@ export default function Link({ target, rel, href, onClick, className, ...props }
   const isLocal = isLocalLink(href)
   const linkTarget = !isLocal ? target || TARGET_BLANK : undefined
   const linkRel = !isLocal ? classNames(rel, 'noopener', 'noreferrer') : rel
+  const navigate = useNavigate()
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick(e)

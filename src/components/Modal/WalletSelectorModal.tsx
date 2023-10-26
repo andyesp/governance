@@ -4,7 +4,7 @@ import { ChainId } from '@dcl/schemas/dist/dapps/chain-id'
 import { ProviderType } from '@dcl/schemas/dist/dapps/provider-type'
 import { connection } from 'decentraland-connect/dist/ConnectionManager'
 import { toModalOptionType } from 'decentraland-dapps/dist/containers/LoginModal/utils'
-import useAnchor from 'decentraland-gatsby/dist/hooks/useAnchor'
+// import useAnchor from 'decentraland-gatsby/dist/hooks/useAnchor'
 import { LoginModal, LoginModalOptionType } from 'decentraland-ui/dist/components/LoginModal/LoginModal'
 
 import useFormatMessage from '../../hooks/useFormatMessage'
@@ -40,7 +40,8 @@ export default function WalletSelectorModal({ chainId, onConnect, onClose, error
     [onConnect]
   )
 
-  const handleDownloadMetamaskClick = useAnchor('https://metamask.io/download.html')
+  // const handleDownloadMetamaskClick = useAnchor('https://metamask.io/download.html')
+  const handleDownloadMetamaskClick = () => 'https://metamask.io/download.html'
   const handleConnectInjected = useCallback(() => {
     if (availableProviders.has(ProviderType.INJECTED)) {
       handleConnect(ProviderType.INJECTED, chainId)

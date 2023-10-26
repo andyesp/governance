@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react'
 
 import useAuthContext from 'decentraland-gatsby/dist/context/Auth/useAuthContext'
-import useTrackContext from 'decentraland-gatsby/dist/context/Track/useTrackContext'
 
+// import useTrackContext from 'decentraland-gatsby/dist/context/Track/useTrackContext'
 import { SegmentEvent } from '../../entities/Events/types'
 
 type IdentityModalContextProps = {
@@ -19,11 +19,11 @@ export const IdentityModalContext = createContext<IdentityModalContextType>({} a
 function IdentityModalContextProvider({ children }: IdentityModalContextProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [user] = useAuthContext()
-  const track = useTrackContext()
+  // const track = useTrackContext()
   const setIsModalOpenWithTracking = (isOpen: boolean) => {
     setIsModalOpen(isOpen)
     if (isOpen) {
-      track(SegmentEvent.ModalViewed, { address: user, modal: 'Identity' })
+      // track(SegmentEvent.ModalViewed, { address: user, modal: 'Identity' })
     }
   }
   return (

@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import Head from 'decentraland-gatsby/dist/components/Head/Head'
 import useAuthContext from 'decentraland-gatsby/dist/context/Auth/useAuthContext'
 import { Button } from 'decentraland-ui/dist/components/Button/Button'

@@ -1,4 +1,4 @@
-import Head from 'decentraland-gatsby/dist/components/Head/Head'
+// import Head from 'decentraland-gatsby/dist/components/Head/Head'
 import { Loader } from 'decentraland-ui/dist/components/Loader/Loader'
 
 import WiderContainer from '../components/Common/WiderContainer'
@@ -42,11 +42,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Head
+      {/* <Head
         title={t('page.home.title')}
         description={t('page.home.description')}
         image="https://decentraland.org/images/decentraland.png"
-      />
+      /> */}
       <Navigation activeTab={NavigationTab.Home} />
       {!endingSoonProposals && <LoadingView withNavigation />}
       {endingSoonProposals && (

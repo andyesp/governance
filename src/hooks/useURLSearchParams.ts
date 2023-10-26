@@ -1,6 +1,5 @@
 import { useMemo } from 'react'
-
-import { useLocation } from '@reach/router'
+import { useLocation } from 'react-router-dom'
 
 export default function useURLSearchParams() {
   const location = useLocation()

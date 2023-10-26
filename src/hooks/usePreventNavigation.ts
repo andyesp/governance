@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
-
-import { globalHistory, useLocation } from '@reach/router'
+import { useLocation } from 'react-router-dom'
 
 import locations, { navigate } from '../utils/locations'
 
@@ -31,17 +30,17 @@ function usePreventNavigation(isActive: boolean) {
 
     window.addEventListener('beforeunload', handleBeforeUnload)
 
-    const unsuscribe = globalHistory.listen(({ action, location }) => {
-      if (
-        isActive &&
-        (action === 'POP' || (action === 'PUSH' && location.pathname === locations.proposals() && !confirmBack.current))
-      ) {
-        preventNavigation(`${location.pathname}${location.search}`)
-      }
-    })
+    // const unsuscribe = globalHistory.listen(({ action, location }) => {
+    //   if (
+    //     isActive &&
+    //     (action === 'POP' || (action === 'PUSH' && location.pathname === locations.proposals() && !confirmBack.current))
+    //   ) {
+    //     preventNavigation(`${location.pathname}${location.search}`)
+    //   }
+    // })
 
     return () => {
-      unsuscribe()
+      // unsuscribe()
       window.removeEventListener('beforeunload', handleBeforeUnload)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

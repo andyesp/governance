@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
+import { useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import classNames from 'classnames'
 import { Dropdown } from 'decentraland-ui/dist/components/Dropdown/Dropdown'
 import { useMobileMediaQuery } from 'decentraland-ui/dist/components/Media/Media'

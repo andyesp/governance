@@ -1,6 +1,6 @@
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import { Location, useLocation } from 'react-router-dom'
 
-import { useLocation } from '@reach/router'
 import classNames from 'classnames'
 
 import useFormatMessage from '../../hooks/useFormatMessage'

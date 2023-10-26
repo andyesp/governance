@@ -1,5 +1,5 @@
 #!/bin/sh
-# ./node_modules/.bin/node-pg-migrate -m lib/migrations -d CONNECTION_STRING up && NODE_ENV=production node lib/server.js
+# ./node_modules/.bin/node-pg-migrate -m lib/migrations -d CONNECTION_STRING up && NODE_ENV=production node lib/back/server.js
 
 #!/bin/sh
 
@@ -14,7 +14,7 @@ echo "running migrations"
 ./node_modules/.bin/node-pg-migrate -m lib/migrations -d CONNECTION_STRING up
 
 echo "starting service..."
-NODE_ENV=production node lib/server.js &
+NODE_ENV=production node lib/back/server.js &
 
 pid=$!
 echo "runnig on $pid"
